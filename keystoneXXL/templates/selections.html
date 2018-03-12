@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <h1>Keystone XXL</h1>
+    <h3>Your Pipeline into the Pipeline</h3>
+    <hr>
+    <div class="form-group">
+    <form method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <label for="language-select">Language</label>
+                <select id="language-select" name="language" class="form-control">
+                    {% for language in languages %}
+                    <option value="{{ language }}">{{ language }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <label for="github-input">Repo Name</label>
+                <input id="github-input" name="github" class="form-control">
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <p>Platform</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="platform" value="PCF" id="PCF-radio" checked>
+                    <label class="form-check-label" for="PCF-radio">Pivotal Cloud Foundry</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="platform" value="Ansible" id="Ansible-radio" disabled>
+                    <label class="form-check-label" for="Ansible-radio">Ansible Tower</label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <input type="submit" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+{% endblock %}

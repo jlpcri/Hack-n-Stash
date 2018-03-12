@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from keystoneXXL.apps.declarations import views as declarations_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', declarations_views.selections, name='selections')
 ]
