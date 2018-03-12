@@ -1,0 +1,7 @@
+resources:
+- name: Hack-n-Stash
+  type: git
+  source:
+    uri: git@repo.sandbox.west.com:Hackathon2018/Hack-n-Stash.git
+    branch: master
+    private_key: ((private-repo-key))
