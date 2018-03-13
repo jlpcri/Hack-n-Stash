@@ -19,7 +19,7 @@ node {
       echo "uploading package..."
       script {
         def buildInfo
-        def server = Artifactory.server ('https://artifacts.sandbox.west.com/artifactory')
+        def server = Artifactory.server ('artifacts')
         def uploadSpec = """{
         "files": [ {
         "pattern": "Jenkinsfile",
