@@ -1,4 +1,4 @@
-name: keystoneXXL
+name: keystoneXXL-pipeline
 memory: 128M
 random-route: true
 path: .
