@@ -10,7 +10,7 @@ resources:
   type: artifactory
   check_every: 1m
   source:
-    endpoint: https://artifacts.sandbox.west.com/artifactory
+    endpoint: https://artifacts.west.com/artifactory
 #   endpoint: http://10.27.122.91/artifactory
     repository: "/dev-lib-local"
     regex: "myapp-(?<version>.*).txt"
