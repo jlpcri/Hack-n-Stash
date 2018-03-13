@@ -25,4 +25,4 @@ jobs:
     file: Hack-n-Stash/keystoneXXL-pipeline/ci/tasks/build.yml
   - put: keystoneXXL
     params:
-      manifest: Hack-n-Stash/keystoneXXL-pipeline/manifest.yml
+      manifest: Hack-n-Stash/keystoneXXL/manifest.yml
