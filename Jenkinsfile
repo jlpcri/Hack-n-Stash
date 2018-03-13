@@ -16,7 +16,7 @@ node {
       sh "tar -cvzf hello.tar.gz hello.sh"
     }
     stage('publish') {
-      echo "uploading package..."
+      echo "uploading Package..."
         steps {
           script {
             def buildInfo
