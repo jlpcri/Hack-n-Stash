@@ -9,13 +9,12 @@ resources:
 - name: keystoneXXL
   type: cf
   source:
-      api: {{cf-api}}
-      username: {{cf-username}}
-      password: {{cf-password}}
-      organization: {{cf-org}}
-      space: {{cf-space}}
-      skip_cert_check: true
-
+    api: api.sys.pcfdev.one.west.com
+    username: ((cf_user))
+    password: ((cf_password))
+    organization: Hackathon
+    space: Dev
+    skip_cert_check: true
 jobs:
 - name: test-app
   plan:
