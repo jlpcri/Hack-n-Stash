@@ -1,0 +1,37 @@
+django-project: keystoneXXL
+github-uri: ssh://git@repo.sandbox.west.com/Hackathon2018/Hack-n-Stash.git
+github-branch: master
+cf-api: https://api.sys.pcfdev.one.west.com
+cf-username: hackathondeploy
+cf-password: password
+cf-org: Hackathon
+cf-space: Dev
+cf-manifest-host: pcf
+github-private-key: |
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEpAIBAAKCAQEA1mf5cTMLgCqTurCVX+Tvc2Aqf7n6SgKMPQDeolRNsEuYt83Q
+  5zjeOueW7FvJN4s7eCBuR4bmdyVQyzO9wKp0I1vcT+hVUUKM5ammbxtG8aERIi4q
+  C6ytgY1ilyMFqVuHgq4tMooCiwoR+TB5VZ2LecZRdeMIrFZoJiOGuVhQ+/Hfvp5V
+  i5s+JFoVltxxkVdhnb+7kZM5l2rKhUHe+ukLiqwDLLm8FUk4Mddbh1EjHP0vaMsH
+  X3pCI6467QWsGsJkPzXMxX7Qvz8aWnT4CKzKFHIe2locIxmxDfp02Pri5mSrJFjr
+  jic0WrJiKb+9CuQa5RN6Ndbm5IaD1rJEeL45cQIDAQABAoIBAEaKat09iBkg6P3R
+  PzQPpGB3UUQ4sgpLkEw5zwXlarIIDTTb+FE6upLywwr8n9Uwb95z/RR3Y7frhQt1
+  +IY9Dnzbqj54GCnmFWkySdngRZUWAwcV3St+Io+vLrK/CQvRW2I5YBFyqqeIJqWv
+  txvd+5eTEhYRHjdlLlrt8VNlpS9eqJvL77Bzg0bpIPAUe5le82bH61tdrRqeNkkO
+  XLyhSkloI2VqMAGg3JWeN8Za3Qt9Mux5xz8wQWazRS1vCziZrluXrklDqEXPsCc1
+  6Ex7tVvrxYUTIgi6mJ/4vZLr70VUckvqXgePe6Vd8pVA851t72Ho/Yio7dBobmdx
+  SNBFTykCgYEA8bhKO4uvEKOk6o4K1xiiQUKDNfF8L/Co4xqUGUMbMNPxMFqomev4
+  oDqgzXG83l3NfR6/4YrchZDjGfPUXQIijD2WEcqPLkAHJI5GOKukxiY6ViS7gcIq
+  2iyXz45luAEaqCkWZdDaBwO4X17lEiFhHyXpTwULWZhr7lt1cLzsotcCgYEA4xKZ
+  NP5jem7euXge5hQvtxJ27yijUgYsxYplIyscoYbCRSL5A9EdInekkzTePipGiOGI
+  B05deW8ARctWZEH0XcXze20UzUroY7RppGJHautIpmMeuHEq2hRNnNF2fHJE9VLT
+  RoekeZOOX409fGn6427mjFZnCB3kaSyAVRq0RPcCgYBVSNOQLNmowkRGqbUzbTKa
+  WfBXkQtjEsNT1aXZP+8RDEZ17Ba+sB450lW4BuA/iNMeyUGkP01NJvCp0HjmFAHC
+  f1w6jMB17gtXH4exKQZrD0PX7v/laW+bKM6rYa+L+3+/Qzfu1oCGpw5fP+kMu5A7
+  4DFwOvRlOT0jjUtjapUHYwKBgQCWGUAu2I13a/xMC0wZeHSGBm2Z73nuCWjk93Od
+  SK03VLXsL479Z+hjVUTzjbnuy9EuQC7D7Zg6YhaDDENCKJrYtbYZ+2QJxB9TcPl4
+  EQL2eSrf2Zt//kZ+O3eGVquE3aAZrjM8ZwNg3hn5rYpcSE3wsukxERgwNFo8746x
+  MuLAxwKBgQDgfKxeeNMkWOcsglunCEk+O4odkGgWtFdGBtzHcB/1OO2VzSDe2Pok
+  OzJ2mqiy/D8kJGa4laZ6N+HPiXuyZF4QMOCQUclaby7o4G6bNfHxrNAh1Ij2awOt
+  Mj+xL3RdaX55NGeQHX61gxRkUs1Ca1AGKtfULF3HWuYjxT3xNS4mcw==
+  -----END RSA PRIVATE KEY-----

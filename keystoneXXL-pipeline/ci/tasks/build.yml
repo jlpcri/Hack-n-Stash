@@ -1,0 +1,13 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: python
+    tag: "latest"
+
+inputs:
+- name: keystoneXXL-pipeline
+
+run:
+  path: Hack-n-Stash/keystoneXXL-pipeline/ci/tasks/build.sh

@@ -1,0 +1,28 @@
+resources:
+- name: Hack-n-Stash
+  type: git
+  source:
+      uri: {{github-uri}}
+      branch: {{github-branch}}
+      private_key: {{github-private-key}}
+
+- name: staging-app
+  type: cf
+  source:
+      api: {{cf-api}}
+      username: {{cf-username}}
+      #password: {{cf-password}}
+      organization: {{cf-org}}
+      space: {{cf-space}}
+      skip_cert_check: true
+
+jobs:
+- name: test-app
+  plan:
+  - get: Hack-n-Stash
+    trigger: true
+  - task: tests
+    file: Hack-n-Stash/keystoneXXL-pipeline/ci/tasks/build.yml
+  - put: staging-app
+    params:
+      manifest: Hack-n-Stash/keystoneXXL-pipeline/manifest.yml
