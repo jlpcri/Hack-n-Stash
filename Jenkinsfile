@@ -16,6 +16,7 @@ node {
       sh "tar -cvzf hello.tar.gz hello.sh"
     }
     stage('publish') {
+<<<<<<< HEAD
       echo "uploading package..."
       script {
         def buildInfo
@@ -25,6 +26,20 @@ node {
         "pattern": "Jenkinsfile",
         "target": "Hack-n-Stash/builds/" } ]
         }"""
+=======
+      echo "uploading Package..."
+        steps {
+          script {
+            def buildInfo
+            def server = Artifactory.server ('artifacts')
+            def uploadSpec = """{
+            "files": [ {
+            "pattern": "Jenkinsfile",
+            "target": "Hack-n-Stash/builds/" } ]
+            }"""
+          }
+        }
+>>>>>>> ee69d1e6d5aaa4ef4b644f1d6966d65b3342755e
       }
     }
   } finally {
