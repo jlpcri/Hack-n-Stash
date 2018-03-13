@@ -17,7 +17,7 @@ node {
     }
     stage('publish') {
       echo "uploading package..."
-	}
+    }
   } finally {
     stage('cleanup') {
       echo "doing some cleanup..."
