@@ -7,7 +7,7 @@ image_resource:
     tag: "latest"
 
 inputs:
-- name: keystoneXXL-pipeline
+- name: Hack-n-Stash
 
 run:
   path: Hack-n-Stash/keystoneXXL-pipeline/ci/tasks/build.sh
