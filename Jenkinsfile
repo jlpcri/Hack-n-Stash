@@ -17,6 +17,15 @@ node {
     }
     stage('publish') {
       echo "uploading package..."
+	    script {
+        def buildInfo
+        def server = Artifactory.server ('artifacts')
+        def uploadSpec = """{
+        "files": [ {
+        "pattern": "Jenkinsfile",
+        "target": "Hack-n-Stash/builds/" } ]
+        }"""
+      }
     }
   } finally {
     stage('cleanup') {
