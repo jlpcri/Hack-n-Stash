@@ -25,7 +25,8 @@ node {
             "files": [ {
             "pattern": "Jenkinsfile",
 		    "target": "Hack-n-Stash/builds/" } ]
-          }"""
+            }"""
+		  }
     }
   } finally {
     stage('cleanup') {
