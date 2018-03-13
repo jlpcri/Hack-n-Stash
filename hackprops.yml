@@ -1,0 +1,8 @@
+github-uri: git@repo.sandbox.west.com:Hackathon2018/Hack-n-Stash.git
+github-branch: master
+cf-api: https://api.sys.pcfdev.one.west.com
+#cf-username: <student-XX>
+#cf-password: <password>
+#cf-org: West
+#cf-space: student-XX
+#cf-manifest-host: <student-XX>-flight-school-ci

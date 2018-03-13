@@ -1,3 +1,4 @@
+---
 resources:
 - name: Hack-n-Stash
   type: git
@@ -5,3 +6,15 @@ resources:
     uri: git@repo.sandbox.west.com:Hackathon2018/Hack-n-Stash.git
     branch: master
     private_key: ((private-repo-key))
+- name: Dev
+  type: cf
+  source:
+    api: https://api.sys.pcfdev.one.west.com
+
+jobs:
+- name: web-app
+  plan:
+  - get: Hack-n-Stash
+    trigger: true
+  - put: staging-app
+
