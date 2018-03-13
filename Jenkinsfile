@@ -27,7 +27,7 @@ node {
 		    "target": "Hack-n-Stash/builds/" } ]
             }"""
 		  }
-    }
+        }
   } finally {
     stage('cleanup') {
       echo "doing some cleanup..."
