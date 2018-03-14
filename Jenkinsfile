@@ -27,15 +27,15 @@ node {
         }"""
         def buildInfo1 = server.upload(uploadSpec)
         server.publishBuildInfo(buildInfo1)
+        def scanConfig = [
+          'buildName'      : buildInfo1.name,
+          'buildNumber'    : buildInfo1.number
+        ]
+        def scanResult = server.xrayScan scanConfig
+        echo scanResult as String
       }
     }
     stage('scan') {
-    def scanConfig = [
-      'buildName'      : buildInfo1.name,
-      'buildNumber'    : buildInfo1.number
-    ]
-    def scanResult = server.xrayScan scanConfig
-    echo scanResult as String
     }
   } finally {
     stage('cleanup') {
