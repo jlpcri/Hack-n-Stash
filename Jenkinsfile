@@ -29,13 +29,12 @@ node {
         server.publishBuildInfo(buildInfo1)
         def scanConfig = [
           'buildName'      : buildInfo1.name,
-          'buildNumber'    : buildInfo1.number
+          'buildNumber'    : buildInfo1.number,
+          'failBuild'      : false
         ]
         def scanResult = server.xrayScan scanConfig
         echo scanResult as String
       }
-    }
-    stage('scan') {
     }
   } finally {
     stage('cleanup') {
