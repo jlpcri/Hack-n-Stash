@@ -15,7 +15,11 @@ node {
     stage('publish') {
       echo "uploading package..."
 	    script {
-        def buildInfo
+        def buildInfo Artifactory.newBuildInfo()
+        buildInfo.name = 'Hack-n-Stash'
+        buildInfo.retention maxBuilds: 10
+        buildInfo.number = 'v1.2.3'
+        server.publishBuildInfo buildInfo
         def server = Artifactory.server ('artifacts')
         def uploadSpec = """{
         "files": [
@@ -25,7 +29,6 @@ node {
           }
 		]
         }"""
-		def buildInfo2 = server.upload uploadSpec
         server.upload(uploadSpec)
       }
     }
