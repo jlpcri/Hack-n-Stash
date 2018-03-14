@@ -14,7 +14,6 @@ node {
     }
     stage('package') {
       sh "tar -cvzf hello.tar.gz hello.sh"
-	  artifactoryUpload()
     }
     stage('publish') {
       echo "uploading package..."
@@ -24,7 +23,8 @@ node {
         def uploadSpec = """{
         "files": [ {
         "pattern": "Jenkinsfile",
-        "target": "Hack-n-Stash/builds/" } ]
+        "target": "/tmp/Hack-n-Stash/builds/" } ]
+	    artifactoryUpload()
         }"""
       }
     }
