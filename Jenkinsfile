@@ -17,7 +17,6 @@ node {
 	  script {
         def buildInfo
         def server = Artifactory.server ('artifacts')
-        buildInfo.retention maxBuilds: 10
         server.publishBuildInfo buildInfo
         def uploadSpec = """{
         "files": [
