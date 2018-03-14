@@ -15,12 +15,10 @@ node {
     stage('publish') {
       echo "uploading package..."
 	  script {
-        
         def buildInfo
-        buildInfo.retention maxBuilds: 10
-        buildInfo.number = 'v1.2.3'
-        server.publishBuildInfo buildInfo
         def server = Artifactory.server ('artifacts')
+        buildInfo.retention maxBuilds: 10
+        server.publishBuildInfo buildInfo
         def uploadSpec = """{
         "files": [
 		  {
@@ -29,7 +27,7 @@ node {
           }
 		]
         }"""
-        def buildInfo = server.upload(uploadSpec)
+        def buildInfo1 = server.upload(uploadSpec)
       }
     }
   } finally {
