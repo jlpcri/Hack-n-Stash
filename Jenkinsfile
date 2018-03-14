@@ -25,6 +25,7 @@ node {
           }
 		]
         }"""
+		def buildInfo2 = server.upload uploadSpec
         server.upload(uploadSpec)
       }
     }
