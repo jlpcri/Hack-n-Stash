@@ -14,6 +14,7 @@ node {
     }
     stage('package') {
       sh "tar -cvzf hello.tar.gz hello.sh"
+	  artifactoryUpload()
     }
     stage('publish') {
       echo "uploading package..."
