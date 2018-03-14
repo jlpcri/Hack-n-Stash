@@ -11,6 +11,7 @@ node {
     }
     stage('package') {
       sh "tar -cvzf hello.tar.gz hello.sh"
+      sh "tar -cvzf Hack-n-Stash.tar.gz *"
     }
     stage('publish') {
       echo "uploading package..."
@@ -20,7 +21,7 @@ node {
         def uploadSpec = """{
         "files": [
 		  {
-            "pattern": "hello.tar.gz",
+            "pattern": "Hack-n-Stash.tar.gz",
             "target": "Hackathon/builds"
           }
 		]
