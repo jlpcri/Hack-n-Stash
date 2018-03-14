@@ -21,7 +21,7 @@ node {
         "files": [
 		  {
             "pattern": "hello.tar.gz",
-            "target": "Hack-n-Stash"
+            "target": "dev-lib-local/Hack-n-Stash"
           }
 		]
         }"""
