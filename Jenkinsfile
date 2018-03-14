@@ -17,7 +17,6 @@ node {
 	  script {
         
         def buildInfo
-        buildInfo.name = 'Hack-n-Stash'
         buildInfo.retention maxBuilds: 10
         buildInfo.number = 'v1.2.3'
         server.publishBuildInfo buildInfo
