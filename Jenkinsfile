@@ -22,7 +22,7 @@ node {
         "files": [
 		  {
             "pattern": "Hack-n-Stash.tar.gz",
-            "target": "Hackathon/builds"
+            "target": "Hackathon/"
           }
 		]
         }"""
