@@ -17,7 +17,6 @@ node {
 	  script {
         def buildInfo
         def server = Artifactory.server ('artifacts')
-        server.publishBuildInfo buildInfo
         def uploadSpec = """{
         "files": [
 		  {
@@ -27,6 +26,7 @@ node {
 		]
         }"""
         def buildInfo1 = server.upload(uploadSpec)
+        server.publishBuildInfo(buildInfo1)
       }
     }
   } finally {
