@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 import requests
 
@@ -22,9 +22,10 @@ def selections(request):
             r = requests.post("https://repo.sandbox.west.com/api/v3/repos/caheyden/{0}/transfer".format(request.POST['github']),
                               auth=("caheyden", "e4f953b5feb8b89946bd917d166ae22ccc9978a1"), verify=False,
                               json={'new_owner': request.POST['owner']},
-                             headers={'accept': 'application/vnd.github.nightshade-preview+json'})
+                              headers={'accept': 'application/vnd.github.nightshade-preview+json'})
             if r.status_code >= 400:
                 raise RuntimeError("Repository transfer failed - " + r.text)
+        return redirect("https://repo.sandbox.west.com/{0}/{1}".format(request.POST['owner'], request.POST['github']))
 
     languages = ['Python-Django', 'PHP']
     return render(request, 'selections.html', {'languages': languages})
