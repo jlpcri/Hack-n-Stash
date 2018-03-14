@@ -15,7 +15,7 @@ node {
     stage('publish') {
       echo "uploading package..."
 	    script {
-        def buildInfo Artifactory.newBuildInfo()
+        def buildInfo
         buildInfo.name = 'Hack-n-Stash'
         buildInfo.retention maxBuilds: 10
         buildInfo.number = 'v1.2.3'
