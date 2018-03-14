@@ -14,7 +14,8 @@ node {
     }
     stage('publish') {
       echo "uploading package..."
-	    script {
+	  script {
+        
         def buildInfo
         buildInfo.name = 'Hack-n-Stash'
         buildInfo.retention maxBuilds: 10
@@ -25,11 +26,11 @@ node {
         "files": [
 		  {
             "pattern": "hello.tar.gz",
-            "target": "dev-lib-local/"
+            "target": "Hackathon/builds"
           }
 		]
         }"""
-        server.upload(uploadSpec)
+        def buildInfo1 = server.upload(uploadSpec)
       }
     }
   } finally {
