@@ -29,6 +29,14 @@ node {
         server.publishBuildInfo(buildInfo1)
       }
     }
+    stage('scan') {
+    def scanConfig = [
+      'buildName'      : buildInfo.name,
+      'buildNumber'    : buildInfo.number
+    ]
+    def scanResult = server.xrayScan scanConfig
+    echo scanResult as String
+    }
   } finally {
     stage('cleanup') {
       echo "doing some cleanup..."
