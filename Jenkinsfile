@@ -29,7 +29,7 @@ node {
           }
 		]
         }"""
-        def buildInfo1 = server.upload(uploadSpec)
+        def buildInfo = server.upload(uploadSpec)
       }
     }
   } finally {
