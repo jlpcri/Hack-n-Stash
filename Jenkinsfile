@@ -6,9 +6,6 @@ node {
     stage('prepare') {
       sh "git clean -fdx"
     }
-    stage('compile') {
-      echo "nothing to compile for hello.sh..."
-    }
     stage('test') {
       sh "./test_hello.sh"
     }
@@ -23,12 +20,12 @@ node {
         def uploadSpec = """{
         "files": [
 		  {
-            "pattern": "hello*",
-            "target": "Hack-n-Stash/builds/"
+            "pattern": "hello.tar.gz",
+            "target": "Hack-n-Stash"
           }
 		]
         }"""
-		server.upload(uploadSpec)
+        server.upload(uploadSpec)
       }
     }
   } finally {
