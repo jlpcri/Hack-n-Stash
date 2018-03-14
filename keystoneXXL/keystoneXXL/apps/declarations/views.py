@@ -7,10 +7,6 @@ from keystoneXXL.apps.declarations.utils import make_django_repo
 
 def selections(request):
     if request.method == 'POST':
-        print(request.POST['language'])
-        print(request.POST['github'])
-        print(request.POST['owner'])
-        print(request.POST['platform'])
         payload = {'name': request.POST['github'],
                    'description': 'Repository created via KeystoneXXL',
                    'homepage': 'http://{0}.app.pcfdev.one.west.com'.format(request.POST['github'])}
