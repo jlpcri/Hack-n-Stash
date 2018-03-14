@@ -21,11 +21,14 @@ node {
         def buildInfo
         def server = Artifactory.server ('artifacts')
         def uploadSpec = """{
-        "files": [ {
-        "pattern": "Jenkinsfile",
-        "target": "/tmp/Hack-n-Stash/builds/" } ]
-	    artifactoryUpload()
+        "files": [
+		  {
+            "pattern": "hello*",
+            "target": "Hack-n-Stash/builds/"
+          }
+		]
         }"""
+		server.upload(uploadSpec)
       }
     }
   } finally {
